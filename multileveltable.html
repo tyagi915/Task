@@ -1,0 +1,55 @@
+<html>
+    <head>
+        <style>
+             table, th, td {
+            border: 10px solid black;
+            border-collapse: collapse;
+            padding: 10px;
+            color:white;
+        }
+        th,td{
+            text-align: center;
+        }
+          body{
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              background-color: gray;
+          }
+</style>
+       </head>
+    <body>
+        <table>
+            <caption style="color:red">My Multi Level Table</caption>
+            <tr>
+                <th rowspan="2" colspan="2">Column 0</th>
+                <th rowspan="2">Column 2a</th>
+                <th colspan="2">Column 2b</th>
+            </tr>
+            <tr>
+                <th>Coulmn21</th>
+                <th>Colun2b</th>
+            </tr>
+        
+            <tr>
+                <th rowspan="2">Row1</th>
+                <th>Row la</th>
+                <td>123</td>
+                <td>456</td>
+                <td>789</td>
+                </tr>
+                <tr>
+                    <th>Row lb</th>
+                     <td>123</td>
+                    <td>456</td>
+                    <td>789</td>
+                    </tr>
+                    <tr>
+                        <th colspan="2">Row2</th>
+                        <td>123</td>
+                        <td>456</td>
+                        <td>789</td>
+                    </tr>
+    </table>
+    </body>
+</html>
