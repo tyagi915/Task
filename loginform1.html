@@ -1,0 +1,96 @@
+<hmtl>
+    <head>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+        </head>
+<style>
+    
+    .container{
+        width: 400px;
+        background-color:gray;
+        border: 1px solid white;
+        margin:0 auto
+
+    }
+    
+    .login{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border:2px solid yellow;
+        margin:40px;
+        background-color: white;
+        
+    }
+    .input-container { 
+  display: flex;
+  width:200px;
+  margin-bottom: 15px;
+}
+.icon {
+  padding: 10px;
+  background: dodgerblue;
+  color: white;
+  min-width: 50px;
+  text-align: center;
+}
+.nav{
+    display: flex;
+    background-color: brown;
+    width: 100%;
+}
+   
+    .button{
+        
+        background-color: blue;
+        margin-top: 20px;
+        height:30px;
+    }
+    #footer{
+        margin-top:20px;
+    }
+    #lost{
+        margin-left:12px;
+    }
+    p{
+        margin-left: 70px;
+        color:white
+    }
+    .cross{
+        margin-top: 16px;
+        margin-left:70px;
+        
+    }
+
+</style>
+    </head>
+    <body>
+        <div class="container">
+           
+            <div class="login">
+                <div class="nav">
+                <p>Login Form</p>
+                <i class="fa fa-times cross" aria-hidden="true"></i>
+                </div>
+                <div class="input-container">
+            <input  class="input" type="email" name="email" placeholder="EmailAddress..."/>
+             <i class="fa fa-user icon"></i>
+            </div>
+            <div class="input-container">
+            <input type="password" class="input second" id="password" id="password" name="password" placeholder="password..."/>
+            <i class="fa fa-key icon"></i>
+            </div>
+            <div id="footer">
+                <Button>Sign</Button>
+                <span id="lost">Lost Your password?</span>
+
+            </div>
+            
+            </div>
+        </div>
+        
+        
+
+    </body>
+</hmtl>

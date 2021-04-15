@@ -1,0 +1,90 @@
+<hmtl>
+    <head>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+    .container{
+        width: 400px;
+        background-color:yellow;;
+        border: 1px solid blue;
+        margin:0 auto;
+
+    }
+    .login{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border:2px solid yellow;
+        margin: 10px;
+        background-color: white;
+    }
+    .input{
+        width: 200px;
+
+    }
+    .input2
+    {
+        margin-top:20px;
+    }
+    .sign{
+        display: flex;
+    }
+.button{
+        
+        background-color: blue;
+        width:200px;
+        margin-top: 20px;
+        height:30px;
+    }
+    #forget{
+        color:blue;
+        width: 100%;
+        text-align:center;
+        border-bottom:none;
+        height:40px;
+        margin-top:50px;
+
+    }
+    .circle{
+        width:100px;
+        height:100px;
+        border-radius:50%;
+        background-color:#008000;
+        position:relative;
+        left:160px;
+        top:30px;
+        
+     
+    }
+    .icon {
+  
+  background: dodgerblue;
+  color: white;
+  text-align: center;
+  border-style:none;
+  position: absolute;
+  top:30px;
+  left:30px;
+  padding:10px;
+}
+
+</style>
+    </head>
+    <body>
+        <div class="container">
+            <div>
+            <div class="circle">  <i class="fa fa-user icon"></i></div>
+            </div>
+           
+            <div class="login">
+                
+              
+                <p>Member Login</p>
+            <input  class="input" value="UserName" type="email" name="email" placeholder="EmailAddress..."/>
+            <input type="password" value=".........."class="input input2" id="password" id="password" name="password" placeholder="password..."/>
+              <input type="button" value="login" class="input button"/>
+            <p id="forget">Forget Password?</p>
+            </div>
+        </div>
+    </body>
+</hmtl>

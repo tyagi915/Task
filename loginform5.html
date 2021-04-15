@@ -1,0 +1,124 @@
+<hmtl>
+    <head>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+        </head>
+<style>
+    
+    .container{
+    width:800px;
+        background-color:gray;
+        border: 1px solid white;
+        margin:0 auto;
+        display: flex;;
+
+    }
+    p{
+        margin-top:8px;
+        color:white;
+        font-size:18px;
+        font-weight: bold;
+
+    }
+    
+    .login{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border:2px solid yellow;
+        margin:40px;
+        background-color: white;
+        width:400px;
+        
+    }
+    .input-container { 
+  display: flex;
+  width:200px;
+  margin-top: 25px;
+}
+.input{
+    width:200px;
+}
+.icon {
+  padding: 10px;
+  background: dodgerblue;
+  color: white;
+  min-width: 50px;
+  text-align: center
+}
+.a{
+        display: flex;
+        margin-top:30px;
+    }
+
+
+.button{
+        
+        background-color: blue;
+        margin-top: 20px;
+        height:30px;
+    }
+    .right{
+        display:flex;
+        flex-direction: column;
+        margin:40px;
+    }
+    .link{
+        margin-top:25px;
+    }
+    .size
+    {
+        font-size:20px;
+    }
+    a{
+        text-decoration: none;
+        border:1px solid red;
+        color:white;
+    }
+
+
+    
+
+</style>
+    </head>
+    <body>
+        <div class="container">
+           <div class="login">
+                <p style="color:red">Login into Your Account</p>
+                <div class="input-container">
+            <input  class="input" type="email" name="email" placeholder="EmailAddress..."/>
+             <i class="fa fa-user icon"></i>
+            </div>
+            <div class="input-container">
+            <input type="password" class="input second" id="password" id="password" name="password" placeholder="password..."/>
+            <i class="fa fa-key icon"></i>
+            </div>
+            <input class="input button" type="button" value="login"/>
+            <div class="a">
+                <input id="rem" type="checkbox" value="rem"/>Remember me
+                <span style="margin-left:10px">Forget Password?</span>
+
+            </div>
+    
+            
+            </div>
+            <div class="right">
+                <p style="margin-top:8px;color:white;font-size:18px;font-weight: bold;">Dont have Account SignUp?</p>
+                <a class=" link size" style="background-color: blue;" href="#" class="fb btn input">
+                    <i class="fa fa-facebook fa-fw "></i> Login with Facebook
+                   </a>
+                   <a style="background-color: red;" class="link size" href="#" class="fb btn input">
+                    <i class="fa fa-twitter fa-fw"></i>Login With Twitter
+                
+                   </a>
+                   <a style="background-color: brown;" class="link size" href="#" class="fb btn input">
+                    <i class="fa fa-google fa-fw"></i> Login with Google
+                   </a>
+            </div>
+        </div>
+        
+        
+
+    </body>
+</hmtl>

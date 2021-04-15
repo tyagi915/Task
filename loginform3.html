@@ -1,0 +1,67 @@
+<hmtl>
+    <head>
+<style>
+    .container{
+        width: 400px;
+        background-color:red;;
+        border: 1px solid blue;
+        margin:0 auto
+
+    }
+    .login{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border:2px solid yellow;
+        margin:40px;
+        background-color: white;
+    }
+    .input{
+        width: 200px;
+
+    }
+    .input2
+    {
+        margin-top:20px;
+    }
+    .sign{
+        display: flex;
+    }
+.button{
+        
+        background-color: blue;
+        width:150px;
+        margin-top: 20px;
+        height:30px;
+    }
+    #forget{
+        color:blue;
+      background-color: silver;
+        width: 100%;
+        text-align:center;
+        border-bottom:none;
+        height:40px;
+        margin-top:50px;
+
+    }
+
+</style>
+    </head>
+    <body>
+        <div class="container">
+           
+            <div class="login">
+                <div class="sign">
+               <a href="#">SIGNIN</a>
+                <a href="#" style="margin-left:6px;">SIGNUP</a>
+                </div>
+                <p>User Icon</p>
+            <input  class="input" type="email" name="email" placeholder="EmailAddress..."/>
+            <input type="password" class="input input2" id="password" id="password" name="password" placeholder="password..."/>
+              <input type="button" value="login" class="input button"/>
+            <p id="forget">Forget Password?</p>
+            </div>
+        </div>
+    </body>
+</hmtl>
