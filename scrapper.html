@@ -1,0 +1,60 @@
+<html>
+    <head>
+      <style>
+        .d{
+          display: flex;
+          flex-direction: column;
+        }
+        #d div:nth-child(even) {
+          background-color: red;
+        }
+        #d div:nth-child(odd){
+          background-color:blue;
+        }
+        #d div span{
+          color:white;
+          margin:10px;
+          text-align: center;
+        }
+      </style>
+        </head>
+             <body>
+               <h1>100 top actor</h1>
+            <div id="d">
+             </div>
+              <script>
+                var xhr=new XMLHttpRequest();
+        xhr.open("GET","https://cors-anywhere.herokuapp.com/https://www.imdb.com/list/ls074758327/",true);
+            xhr.responseType="document";
+            xhr.onreadystatechange=function(){
+              if(xhr.readyState==4&&xhr.status==200){
+              var response=xhr.responseXML.getElementsByClassName('lister-item-header');
+            var response1=xhr.responseXML.querySelectorAll('.lister-item-content p:nth-child(2)');
+             console.log(response1);
+               console.log(response);
+               const root=document.getElementById('d');
+                console.log(root);
+               for(var i=0;i<response.length;i++){
+               console.log(response[i].innerText);
+               console.log(response1[i].innerText);
+               const div=document.createElement('div');
+               const span=document.createElement("span");
+               const text=document.createTextNode(response[i].innerText);
+               const span1=document.createElement('span');
+               const text1=document.createTextNode(response1[i].innerText);
+               var att = document.createAttribute("class"); 
+               att.value = "demo";  
+               span.setAttributeNode(att);
+               span.appendChild(text);
+               span1.appendChild(text1);
+                div.appendChild(span);
+                div.append(span1);
+               root.appendChild(div);
+              }
+         }
+   }
+  xhr.send();
+  console.log("hii");
+        </script>
+       </body>
+</html>

@@ -1,0 +1,73 @@
+<html>
+    <head>
+        <style>
+            #table{
+                border-collapse: collapse;
+            
+            }
+            tr,td,table,th{
+                border:1px solid
+            }
+        
+        </style>
+        </head>
+           <body>
+        <table id="table">
+                  <tr>
+                 <th>Name</th>
+                 <th>Description</th>
+                   </tr>
+                </table>
+                <button onclick="exportToExcel('table')">Export Table Data To Excel File</button>
+              <script>
+                var xhr=new XMLHttpRequest();
+        xhr.open("GET","https://cors-anywhere.herokuapp.com/https://www.imdb.com/list/ls074758327/",true);
+            xhr.responseType="document";
+            xhr.onreadystatechange=function(){
+              if(xhr.readyState==4&&xhr.status==200){
+              var response=xhr.responseXML.getElementsByClassName('lister-item-header');
+            var response1=xhr.responseXML.querySelectorAll('.lister-item-content p:nth-child(2) a');
+             console.log(response1);
+               console.log(response);
+               const root=document.getElementById('table');
+                console.log(root);
+               for(var i=0;i<response.length;i++){
+               console.log(response[i].innerText);
+               console.log(response1[i].innerText);
+               const tr=document.createElement('tr');
+               const td=document.createElement("td");
+               const td1=document.createElement("td");
+               const text=document.createTextNode(response[i].innerText);
+               const text1=document.createTextNode(response1[i].innerText);
+               td.appendChild(text);
+               td1.appendChild(text1);
+               tr.appendChild(td);
+               tr.appendChild(td1);
+               root.appendChild(tr);
+              }
+         }
+   }
+  xhr.send();
+  console.log("hii");
+  function exportToExcel(tableID, filename = ''){
+    var downloadurl;
+    var dataFileType = 'application/vnd.ms-excel';
+    var tableSelect = document.getElementById(tableID);
+    var tableHTMLData = tableSelect.outerHTML.replace(/ /g, '%20');
+    filename = filename?filename+'.xls':'export_excel_data.xls';
+    downloadurl = document.createElement("a");
+    document.body.appendChild(downloadurl);
+    if(navigator.msSaveOrOpenBlob){
+        var blob = new Blob(['\ufeff', tableHTMLData], {
+            type: dataFileType
+        });
+        navigator.msSaveOrOpenBlob( blob, filename);
+    }else{
+        downloadurl.href = 'data:' + dataFileType + ', ' + tableHTMLData;
+        downloadurl.download = filename;
+        downloadurl.click();
+    }
+}
+        </script>
+       </body>
+</html>

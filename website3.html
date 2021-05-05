@@ -117,10 +117,15 @@
     ul li p{
         margin-top:6px;
     }
-    #section6{
-        width:100%;
-        background-color:red;;
-    }
+    .flex-container1 {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.flex-item-left {
+  flex: 50%;
+  padding-right:5%;
+}
 
 
 
@@ -317,6 +322,30 @@
 <button style="width:200px;height:40px;background-color:white;color:blue;margin-right:300px;border: none;margin-top:30px;">Contact Us</button>
 </div>
 
+
+
+<div style= "background-color:#4867d6;color:#fff;">
+    <div class= "flex-container1">
+      <div class= "flex-item-left">
+        <form style= "margin:15%">
+          <input type= "text" placeholder= "Enter your Name" style= "buttonbg"><br><br>
+          <input type= "text" placeholder= "Enter a valid email address" style= "buttonbg"><br><br>
+          <textarea rows= "5" cols= "30%" style= "background-color:#4867d6;color:#fff;border:none;border-bottom:2px solid white;"></textarea>
+          <button style= "margin:5% 1%;padding:1.5% 10%;background-color:#4867d6;color:white;border-color:#fff;border-style:solid;">SUBMIT</button>
+        </form>
+      </div>
+      <div class= "flex-item-right">
+        <p style= "margin:10% 0 3% 10%;font-size:4rem;">CONTACT US</p>
+        <a style= "margin-left: 15%;font-size:2.5rem;" href="#" class="fa fa-facebook"></a>
+        <a style= "margin-left: 5%;font-size:2.5rem;" href="#" class="fa fa-twitter"></a>
+        <a style= "margin-left: 5%;font-size:2.5rem;" href="#" class="fa fa-vimeo"></a>
+        <a style= "margin-left: 5%;font-size:2.5rem;" href="#" class="fa fa-instagram"></a>
+        <br><br><br><br><p style= "margin:5% 10%;font-size:2rem;">1 (234) 567-891</p>
+        <p style= "margin:5% 10%;font-size:2rem;">1 (234) 987-654</p>
+      </div>
+    </div>
+    </div>
+    
         
 
 
